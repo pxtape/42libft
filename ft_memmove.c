@@ -13,6 +13,12 @@
 #include "libft.h"
 #define BUFFER_SIZE 1024
 
+/*
+	check overlap dest and src (size of n)
+	1. overlap and dest in the right of src (copy from back to front)
+	2. otherwise do the same memcpy (copy from front to back)
+*/
+
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char		*d;

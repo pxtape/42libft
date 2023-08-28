@@ -21,6 +21,6 @@ char	*ft_strdup(char *src)
 	newstr = (char *)malloc(size + 1);
 	if (newstr == NULL)
 		return (NULL);
-	ft_strlcat(newstr, src, size);
+	ft_strlcat(newstr, src, size + 1);
 	return (newstr);
 }

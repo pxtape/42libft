@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/*
+	copy only size - 1 but if cpy all src already stop
+	special case: size = 0
+		cpy would not occur and no null-terminated
+	return length of src
+*/
+
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	i;

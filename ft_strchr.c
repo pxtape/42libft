@@ -12,6 +12,23 @@
 
 #include "libft.h"
 
+/*
+
+	find int c (change to char first) in str
+
+	if found return that pointer
+	if not found return NULL
+
+	special case for c == 0 or NULL :
+		adding at the end of string
+		if the end is the same as c (NULL)
+			return the pointer
+		otherwise
+			return NULL
+
+*/
+
+
 char	*ft_strchr(const char *str, int c)
 {
 	while (*str)
