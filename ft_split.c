@@ -37,7 +37,7 @@ char	**ft_split(char const *s, char c)
 	size_t	stop;
 	char	**str_arr;
 
-	size_arr = ft_count_split(s,c);
+	size_arr = ft_count_split(s, c);
 	str_arr = (char **)malloc(size_arr + 1);
 	start = 0;
 	stop = 0;

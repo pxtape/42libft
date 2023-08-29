@@ -12,15 +12,18 @@
 
 #include "libft.h"
 
+/*
+	malloc handle total_byte already
+	1. if malloc can't allocate memory it will return NULl and put in error
+*/
+
 void	*ft_calloc(size_t nitems, size_t size)
 {
-	size_t	total_byte;
 	void	*p;
 
-	total_byte = size * nitems;
-	p = malloc(total_byte);
+	p = malloc(size * nitems);
 	if (p == NULL)
 		return (NULL);
-	ft_bzero(p, total_byte);
+	ft_bzero(p, size * nitems);
 	return (p);
 }

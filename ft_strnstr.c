@@ -18,6 +18,8 @@ char	*ft_strnstr(const char *str, const char *sub, size_t size)
 	size_t	sub_len;
 	size_t	i;
 
+	if (!str || !sub)
+		return (NULL);
 	str_len = ft_strlen(str);
 	sub_len = ft_strlen(sub);
 	i = 0;
