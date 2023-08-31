@@ -1,36 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/27 11:32:36 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/08/30 19:10:21 by snetrasi         ###   ########.fr       */
+/*   Created: 2023/08/31 10:55:49 by snetrasi          #+#    #+#             */
+/*   Updated: 2023/08/31 10:58:59 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *c)
-{
-	int	value;
-	int	sign;
+/*
 
-	value = 0;
-	sign = 1;
-	while (ft_isspace(*c))
-		c++;
-	if (*c == '-' || *c == '+')
-	{
-		if (*c == '-')
-			sign = -1;
-		c++;
-	}
-	while (ft_isdigit(*c))
-	{
-		value = value * 10 + sign * (*c - '0');
-		c++;
-	}
-	return (value);
+*/
+
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
 }

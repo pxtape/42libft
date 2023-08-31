@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 19:06:56 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/08/30 19:06:57 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/08/30 20:34:40 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		stop--;
 	new_len = stop - start + 1;
 	s = (char *)malloc(new_len + 1);
-	ft_strlcat(s, s1 + start, new_len + 1);
+	ft_strlcpy(s, s1 + start, new_len + 1);
 	return (s);
 }

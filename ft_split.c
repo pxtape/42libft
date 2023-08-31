@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 11:40:57 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/08/27 16:06:00 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/08/30 22:21:19 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,62 +27,63 @@
 
 */
 
-static size_t	ft_count_split(char const *s, char c);
+static size_t	count_split(char const *s, char c)
+{
+	size_t	i;
+
+	i = 0;
+	while (*s)
+	{
+		if (*s != c && (*(s + 1) == c || *(s + 1) == '\0'))
+			i++;
+		s++;
+	}
+	return (i);
+}
 
 char	**ft_split(char const *s, char c)
 {
-	size_t	i;
-	size_t	size_arr;
-	size_t	start;
-	size_t	stop;
-	char	**str_arr;
+	char	**arr;
+	size_t	j;
+	size_t	size;
 
-	size_arr = ft_count_split(s, c);
-	str_arr = (char **)malloc(size_arr + 1);
-	start = 0;
-	stop = 0;
-	i = 0;
-	while (i < size_arr)
+	arr = (char **)malloc((count_split(s, c) + 1) * sizeof(char *));
+	size = 0;
+	while (*s)
 	{
-		if (s[stop] == c || s[stop] == '\0')
-		{
-			if (stop - start >= 1)
-			{
-				str_arr[i] = (char *)malloc(stop - start + 1);
-				ft_strlcpy(str_arr[i++], s + start, stop - start + 1);
-			}
-			if (s[stop] != '\0')
-				stop++;
-			start = stop;
-		}
+		if (*s == c)
+			s++;
 		else
-			stop++;
+		{
+			j = 0;
+			while (!(*(s + j) != c 
+					&& (*(s + j + 1) == c || *(s + j + 1) == '\0')))
+				j++;
+			arr[size] = (char *)malloc(j + 2);
+			ft_strlcpy(arr[size++], s, j + 2);
+			s += j + 1;
+		}
 	}
-	str_arr[i] = NULL;
-	return (str_arr);
+	arr[size] = NULL;
+	return (arr);
 }
 
-static size_t	ft_count_split(char const *s, char c)
-{
-	size_t	start;
-	size_t	stop;
-	size_t	count;
+// #include <stdio.h>
 
-	count = 0;
-	start = 0;
-	stop = 0;
-	while (s[start] != '\0')
-	{
-		if (s[stop] == c || s[stop] == '\0')
-		{
-			if (stop - start >= 1)
-				count++;
-			if (s[stop] != '\0')
-				stop++;
-			start = stop;
-		}
-		else
-			stop++;
-	}
-	return (count);
-}
+// int	main(int ac, char**av)
+// {
+// 	char	**set;
+// 	int	i;
+
+// 	i = 0;
+// 	if (ac == 2)
+// 	{
+// 		set = ft_split(av[1], ' ');
+// 		while (set[i] != NULL)
+// 		{
+// 			printf("[i]  %s  [f]\n", set[i]);
+// 			free(set[i++]);
+// 		}
+// 		free(set);
+// 	}
+// }

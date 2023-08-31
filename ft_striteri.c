@@ -1,36 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/27 11:32:36 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/08/30 19:10:21 by snetrasi         ###   ########.fr       */
+/*   Created: 2023/08/31 10:50:16 by snetrasi          #+#    #+#             */
+/*   Updated: 2023/08/31 10:54:53 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *c)
-{
-	int	value;
-	int	sign;
+/*
 
-	value = 0;
-	sign = 1;
-	while (ft_isspace(*c))
-		c++;
-	if (*c == '-' || *c == '+')
+
+
+*/
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+{
+	size_t	s_len;
+	size_t	i;
+
+	if (s == NULL)
+		return ;
+	s_len = ft_strlen(s);
+	i = 0;
+	while (i < s_len)
 	{
-		if (*c == '-')
-			sign = -1;
-		c++;
+		f(i, s + i);
+		i++;
 	}
-	while (ft_isdigit(*c))
-	{
-		value = value * 10 + sign * (*c - '0');
-		c++;
-	}
-	return (value);
 }
