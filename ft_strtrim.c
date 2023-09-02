@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 19:06:56 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/08/30 20:34:40 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/02 14:34:43 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,17 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	start = 0;
 	stop = ft_strlen(s1) - 1;
-	while (s1[start] != '\0' && ft_strchr(set, s1[start]))
-		start++;
-	while (stop > start && ft_strchr(set, s1[stop]))
-		stop--;
+	if (*s1 && *set)
+	{
+		while (s1[start] != '\0' && ft_strchr(set, s1[start]))
+			start++;
+		while (stop > start && ft_strchr(set, s1[stop]))
+			stop--;
+	}
 	new_len = stop - start + 1;
 	s = (char *)malloc(new_len + 1);
+	if (!s)
+		return (NULL);
 	ft_strlcpy(s, s1 + start, new_len + 1);
 	return (s);
 }

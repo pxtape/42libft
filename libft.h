@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/26 11:49:11 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/09/01 17:48:54 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/02 13:43:55 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+# include <limits.h>
 
 /* 
 	string

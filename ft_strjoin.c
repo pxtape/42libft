@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 19:06:46 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/08/30 19:06:46 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/02 14:42:05 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	s_len = ft_strlen(s1) + ft_strlen(s2);
 	s = (char *)malloc(s_len + 1);
+	if (!s)
+		return (NULL);
 	ft_strlcpy(s, s1, s_len + 1);
 	ft_strlcat(s, s2, s_len + 1);
 	return (s);

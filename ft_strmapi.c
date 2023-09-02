@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 19:06:24 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/08/30 20:15:12 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/02 14:41:38 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (NULL);
 	s_len = ft_strlen(s);
 	new_s = (char *)malloc(s_len + 1);
+	if (!new_s)
+		return (NULL);
 	i = 0;
 	while (i < s_len)
 	{

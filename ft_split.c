@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 11:40:57 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/08/30 22:21:19 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/02 16:38:52 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,13 +41,46 @@ static size_t	count_split(char const *s, char c)
 	return (i);
 }
 
+static void	clear_arr(char **arr)
+{
+	size_t	i;
+
+	i = 0;
+	while (arr[i] != NULL)
+		free(arr[i++]);
+	free(arr);
+}
+
+static char	*get_split(char const *s, char c, char **arr, size_t *p_size)
+{
+	char	*split;
+	size_t	j;
+
+	j = 0;
+	while (!(*(s + j) != c && (*(s + j + 1) == c
+				|| *(s + j + 1) == '\0')))
+		j++;
+	split = (char *)malloc(j + 2);
+	if (!split)
+	{
+		clear_arr(arr);
+		return (NULL);
+	}
+	ft_strlcpy(split, s, j + 2);
+	arr[*p_size] = split;
+	*p_size += 1;
+	return (split);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**arr;
-	size_t	j;
+	char	*split;
 	size_t	size;
 
 	arr = (char **)malloc((count_split(s, c) + 1) * sizeof(char *));
+	if (!arr)
+		return (NULL);
 	size = 0;
 	while (*s)
 	{
@@ -55,35 +88,32 @@ char	**ft_split(char const *s, char c)
 			s++;
 		else
 		{
-			j = 0;
-			while (!(*(s + j) != c 
-					&& (*(s + j + 1) == c || *(s + j + 1) == '\0')))
-				j++;
-			arr[size] = (char *)malloc(j + 2);
-			ft_strlcpy(arr[size++], s, j + 2);
-			s += j + 1;
+			split = get_split(s, c, arr, &size);
+			if (!split)
+				return (NULL);
+			s += ft_strlen(split);
 		}
 	}
 	arr[size] = NULL;
 	return (arr);
 }
 
-// #include <stdio.h>
+#include <stdio.h>
 
-// int	main(int ac, char**av)
-// {
-// 	char	**set;
-// 	int	i;
+int	main(int ac, char**av)
+{
+	char	**set;
+	int	i;
 
-// 	i = 0;
-// 	if (ac == 2)
-// 	{
-// 		set = ft_split(av[1], ' ');
-// 		while (set[i] != NULL)
-// 		{
-// 			printf("[i]  %s  [f]\n", set[i]);
-// 			free(set[i++]);
-// 		}
-// 		free(set);
-// 	}
-// }
+	i = 0;
+	if (ac == 2)
+	{
+		set = ft_split(av[1], ' ');
+		while (set[i] != NULL)
+		{
+			printf("[i]--%s--[f]\n", set[i]);
+			free(set[i++]);
+		}
+		free(set);
+	}
+}

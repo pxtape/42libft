@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/26 15:08:51 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/08/27 15:55:46 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/02 15:33:09 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	i = 0;
 	s = (const unsigned char *)src;
 	d = (unsigned char *)dest;
+	if (s == d)
+		return (d);
 	if (d > s && d <= s + n - 1)
 	{
 		while (i < n)
