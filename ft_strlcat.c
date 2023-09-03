@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 11:39:40 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/08/27 16:35:13 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/03 16:06:34 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,16 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	dest_len;
 	size_t	i;
 
+	if (!size)
+	{
+		if (!src)
+			return (0);
+		return (ft_strlen(src));
+	}
 	src_len = ft_strlen(src);
 	dest_len = ft_strlen(dest);
 	i = dest_len;
-	if (dest_len < size - 1 && size > 0)
+	if (size > 0 && dest_len < size - 1)
 	{
 		while (i < size - 1 && *(src + i - dest_len))
 		{
@@ -44,3 +50,15 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 		dest_len = size;
 	return (dest_len + src_len);
 }
+
+/*
+int	main(void)
+{
+	char s1[50] = "Hello";
+	char s2[] = " World!";
+	
+	printf("%zu ", ft_strlcat(s1, s2, 50));
+	printf("%s\n", s1);
+	return (0);
+}
+*/

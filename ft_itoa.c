@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 11:40:57 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/09/03 10:33:14 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/03 13:29:37 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,5 +61,6 @@ int	main(void)
 	s = ft_itoa(0);
 	printf("%s\n", s);
 	free(s);
+	return (0);
 }
 */

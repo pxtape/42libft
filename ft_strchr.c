@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 11:40:57 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/08/27 16:06:00 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/03 13:28:48 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,3 +40,14 @@ char	*ft_strchr(const char *str, int c)
 		return ((char *)str);
 	return (NULL);
 }
+
+/*
+int	main(void)
+{
+	char haystack[] = "Name";
+	char needle = 'm';
+
+	printf("%ld\n", ft_strchr(haystack, needle) - haystack);
+	return (0);
+}
+*/

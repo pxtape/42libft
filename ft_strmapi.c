@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 19:06:24 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/09/02 14:41:38 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/03 13:39:36 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,3 +39,20 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	new_s[i] = '\0';
 	return (new_s);
 }
+
+/*
+static void adding(unsigned int i, char *s)
+{
+	*s += i;
+}
+
+int main(void)
+{
+	char A[] = "AAAAAAAAAAAAAAAAAAAAAAAAAA";
+	char *B;
+
+	B = ft_strmapi(A, adding);
+	printf("A: %s\nB: %s\n",A , B);
+	return (0);
+}
+*/

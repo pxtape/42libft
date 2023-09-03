@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 11:39:54 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/08/27 14:41:00 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/03 13:39:33 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,14 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
+
+/*
+int	main(void)
+{
+	char s1[] = "AAAAA";
+	char s2[] = "AAAZA";
+
+	printf("%d\n", strncmp(s1, s2, 5));
+	return (0);
+}
+*/

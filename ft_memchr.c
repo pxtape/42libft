@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 12:01:53 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/09/03 11:40:10 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/03 13:29:20 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,6 @@ int	main(void)
 	
 	printf("%ld\n", ft_memchr(s, 6, 7) - (void *)s);
 	printf("%ld\n", ft_memchr(s, 0, 7) - (void *)s);
+	return (0);
 }
 */

@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 19:06:37 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/08/31 12:22:34 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/03 13:38:21 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,3 +44,14 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	ft_strlcpy(str, s + start, len + 1);
 	return (str);
 }
+
+/*
+int	main(void)
+{
+	char s[] = "Hello World!";
+	char *ss = ft_substr(s, 6, 3);
+	printf("%s\n", ss);
+	free(ss);
+	return (0);
+}
+*/

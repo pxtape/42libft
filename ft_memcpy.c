@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/26 14:50:11 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/09/02 15:32:28 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/03 12:33:29 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,16 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+
+/*
+int	main(void)
+{
+	char dest[20];
+
+	memset(dest, 'A', 20);
+	ft_memcpy(dest, "coucou", 0);
+	write(1, dest, 20);
+	write(1, "\n", 1);
+	return (0);
+}
+*/

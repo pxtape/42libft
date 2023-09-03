@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 11:32:46 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/09/03 10:19:44 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/03 13:30:10 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,14 @@ void	*ft_calloc(size_t nitems, size_t size)
 int	main(void)
 {
 	char	*p;
-	char	l[400];
+	// char	l[400];
 
-//	p = calloc(100, 4);
-	p = ft_calloc(100, 4);
-	memset(l, 0, 400);
-	if (!memcmp(l, p, 400))
-		printf("\033[0;32m""OK\n""\033[0m");
-	else
-		printf("\033[0;31m""KO\n""\033[0m");
+	// p = calloc(100, 4);
+	// p = ft_calloc(100, 4);
+	// memset(l, 0, 400);
+	// if (!memcmp(l, p, 400))
+	// 	printf("\033[0;32m""OK\n""\033[0m");
+	// else
+	// 	printf("\033[0;31m""KO\n""\033[0m");
 }
 */

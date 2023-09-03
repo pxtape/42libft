@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 11:40:57 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/09/02 16:38:52 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/03 14:09:52 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,17 +98,16 @@ char	**ft_split(char const *s, char c)
 	return (arr);
 }
 
-#include <stdio.h>
-
+/*
 int	main(int ac, char**av)
 {
 	char	**set;
 	int	i;
 
 	i = 0;
-	if (ac == 2)
+	if (ac == 3)
 	{
-		set = ft_split(av[1], ' ');
+		set = ft_split(av[1], av[2][0]);
 		while (set[i] != NULL)
 		{
 			printf("[i]--%s--[f]\n", set[i]);
@@ -116,4 +115,6 @@ int	main(int ac, char**av)
 		}
 		free(set);
 	}
+	return (0);
 }
+*/

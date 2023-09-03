@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 11:39:56 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/08/30 19:05:30 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/03 14:57:45 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t size)
 	size_t	i;
 	size_t	j;
 
-	if (!*s2)
+	if (!*s2 || !size)
 		return ((char *)s1);
 	i = 0;
 	while (*(s1 + i) && i < size)
@@ -36,3 +36,14 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t size)
 	}
 	return (NULL);
 }
+
+/*
+int	main(void)
+{
+	char s[] = "Hello,World! Nice to Meet You";
+	char n[] = "!";
+
+	printf("%s\n", ft_strnstr(s, n, 12));
+	return (0);
+}
+*/

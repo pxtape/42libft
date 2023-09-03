@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 11:40:52 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/08/27 14:59:21 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/03 13:28:45 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,14 @@ char	*ft_strdup(char *src)
 	ft_strlcpy(newstr, src, size + 1);
 	return (newstr);
 }
+
+/*
+int	main(void)
+{
+	char	*name = ft_strdup("Tape");
+
+	printf("%s\n", name);
+	free(name);
+	return (0);
+}
+*/

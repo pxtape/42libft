@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 19:06:56 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/09/02 14:34:43 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/03 13:32:52 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,3 +50,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(s, s1 + start, new_len + 1);
 	return (s);
 }
+
+/*
+int	main(void)
+{
+	char *s = ft_strtrim("abcbbaHelloabbccca", "abc");
+	printf("%s\n", s);
+	return (0);
+}
+*/

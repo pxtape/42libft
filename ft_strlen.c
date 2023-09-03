@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/26 12:04:40 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/08/27 12:51:36 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/03 13:28:32 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,3 +21,13 @@ size_t	ft_strlen(char const *c)
 		len++;
 	return (len);
 }
+
+/*
+int	main(void)
+{
+	char s[] = "";
+
+	printf("%zu\n", ft_strlen(s));
+	return (0);
+}
+*/

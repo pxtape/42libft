@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 11:05:29 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/08/31 12:26:14 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/03 13:28:59 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,3 +37,12 @@ void	ft_putnbr_fd(int n, int fd)
 		buffer[i--] = '-';
 	ft_putstr_fd(&buffer[i + 1], fd);
 }
+
+/*
+int	main(void)
+{
+	ft_putnbr_fd("+200abc", 1);
+	ft_putendl_fd("", 1);
+	return (0);
+}
+*/

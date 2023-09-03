@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 11:39:45 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/08/27 16:20:09 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/03 16:01:39 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,19 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	}
 	if (size > 0)
 		*(dest + i) = '\0';
-	return (ft_strlen(src));
+	while (*(src + i))
+		i++;
+	return (i);
 }
+
+/*
+int	main(void)
+{
+	char s1[50] = "Hello";
+	char s2[] = " World!";
+	
+	printf("%zu ", ft_strlcat(s1, s2, 50));
+	printf("%s\n", s1);
+	return (0);
+}
+*/

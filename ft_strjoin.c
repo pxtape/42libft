@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 19:06:46 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/09/02 14:42:05 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/03 13:28:39 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,3 +41,15 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcat(s, s2, s_len + 1);
 	return (s);
 }
+
+/*
+int	main(void)
+{
+	char s1[] = "Hello";
+	char s2[] = ", World!";
+	char *s3 = ft_strjoin(s1, s2);
+	printf("%s\n", s3);
+	free(s3);
+	return (0);
+}
+*/
