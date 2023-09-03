@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 11:40:57 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/08/30 19:08:05 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/03 10:33:14 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,3 +52,14 @@ char	*ft_itoa(int n)
 		buffer[i--] = '-';
 	return (ft_strdup(&buffer[i + 1]));
 }
+
+/*
+int	main(void)
+{
+	char *s;
+
+	s = ft_itoa(0);
+	printf("%s\n", s);
+	free(s);
+}
+*/

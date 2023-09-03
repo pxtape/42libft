@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 11:32:36 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/08/30 19:10:21 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/03 10:02:38 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,3 +34,18 @@ int	ft_atoi(const char *c)
 	}
 	return (value);
 }
+
+/*
+int	main(int ac, char **av)
+{
+	int	i;
+
+	if (ac > 1)
+	{
+	i = 0;
+	while (++i < ac)
+		printf("%d. [real = %d] -- [ft = %d]\n",i , atoi(av[i]), ft_atoi(av[i]));
+	}
+	return (0);
+}
+*/

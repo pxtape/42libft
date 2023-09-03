@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/26 11:49:11 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/09/02 13:43:55 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/03 10:30:47 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>
+
+/* for testing */
+# include <string.h>
+# include <stdio.h>
+# include <ctype.h>
 
 /* 
 	string
