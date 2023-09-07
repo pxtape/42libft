@@ -6,11 +6,13 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 11:39:54 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/09/03 13:39:33 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/07 14:07:55 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// using ft_memcmp because original strncmp compare by unsigned char
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 10:50:16 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/09/03 13:47:09 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/07 14:01:11 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,13 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	size_t	s_len;
 	size_t	i;
 
-	if (s == NULL)
+	if (!s || !f)
 		return ;
-	s_len = ft_strlen(s);
 	i = 0;
-	while (i < s_len)
-	{
-		f(i, s + i);
-		i++;
-	}
+	while (*s)
+		f(i++, s++);
 }
 
 /*

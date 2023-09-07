@@ -6,20 +6,20 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/26 12:04:40 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/09/03 13:28:32 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/07 12:00:53 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char const *c)
+size_t	ft_strlen(char const *str)
 {
-	size_t	len;
+	char const	*c;
 
-	len = 0;
-	while (*(c + len) != '\0')
-		len++;
-	return (len);
+	c = str;
+	while (*str)
+		str++;
+	return (str - c);
 }
 
 /*

@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 11:39:40 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/09/03 16:06:34 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/07 12:39:22 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	src_len = ft_strlen(src);
 	dest_len = ft_strlen(dest);
 	i = dest_len;
-	if (size > 0 && dest_len < size - 1)
+	if (dest_len < size - 1)
 	{
 		while (i < size - 1 && *(src + i - dest_len))
 		{

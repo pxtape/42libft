@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 11:39:45 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/09/03 16:01:39 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/07 12:09:10 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 	copy only size - 1 but if cpy all src already stop
 	special case: size = 0
 		cpy would not occur and no null-terminated
+	if src doesn't been all copied go to the end of src to get i == strlen(src)
+	(use less time doesn't need to use strlen(src))
 	return length of src
 */
 

@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 11:40:52 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/09/03 13:28:45 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/07 12:13:14 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strdup(char *src)
 /*
 int	main(void)
 {
-	char	*name = ft_strdup("Tape");
+	char	*name = ft_strdup(NULL);
 
 	printf("%s\n", name);
 	free(name);

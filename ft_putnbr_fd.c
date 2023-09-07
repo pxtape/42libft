@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 11:05:29 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/09/03 13:28:59 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/07 13:51:52 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	buffer[12];
+	char	buffer[11];
 	char	size;
 	int		i;
 
-	buffer[11] = '\0';
 	size = 1;
 	if (n < 0)
 		size = -1;
@@ -35,7 +34,8 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	if (size == -1)
 		buffer[i--] = '-';
-	ft_putstr_fd(&buffer[i + 1], fd);
+	i++;
+	write(fd, buffer + i, 11 - i);
 }
 
 /*
