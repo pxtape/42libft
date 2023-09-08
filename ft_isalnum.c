@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+ *	checks for alphanumeric character;
+ *	equivalent to (isalpha(c) || isdigit(c)).
+ */
+
 int	ft_isalnum(int c)
 {
 	if (ft_isalpha(c) || ft_isdigit(c))
@@ -19,17 +24,3 @@ int	ft_isalnum(int c)
 	return (0);
 }
 
-/*
-int	main(void)
-{
-	int	i;
-
-	i = 256;
-	if ((isalnum(i) && ft_isalnum(i)) ||
-		(!isalnum(i) && !ft_isalnum(i)))
-		printf("\033[0;32m""OK\n""\033[0m");
-	else
-		printf("\033[0;31m""KO\n""\033[0m");	
-	return (0);
-}
-*/

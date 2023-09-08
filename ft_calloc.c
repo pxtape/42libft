@@ -13,9 +13,15 @@
 #include "libft.h"
 
 /*
-	[Overflow protected (original calloc)]
-	The calculated total memory size need to match the expected number of items.
-	If these conditions are not met, it returns NULL
+ * 	Calloc allocates enough space for count objects 
+ * 	that are size bytes of memory each and returns a pointer
+ * 	to allocated memory.
+ *	If is an error to allocate memory, returns NULL.
+ *
+ * 	[Addition: Overflow Protected]
+ * 	The calculated total memory size need to match 
+ * 	the expected number of items.
+ * 	If these conditions are not met, it returns NULL
 */
 
 void	*ft_calloc(size_t nitems, size_t size)
@@ -33,18 +39,3 @@ void	*ft_calloc(size_t nitems, size_t size)
 	return (p);
 }
 
-/*
-int	main(void)
-{
-	char	l[400];
-	char	*p;
-
-	p = calloc(400, 1);
-	printf("%p\n", p);
-	memset(l, 0, 400);
-	if (!memcmp(l, p, 400))
-		printf("\033[0;32m""OK\n""\033[0m");
-	else
-		printf("\033[0;31m""KO\n""\033[0m");
-}
-*/

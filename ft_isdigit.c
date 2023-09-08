@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/*
+ *	checks for a digit (0 through 9).
+ */
+
 int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
@@ -19,17 +23,3 @@ int	ft_isdigit(int c)
 	return (0);
 }
 
-/*
-int	main(void)
-{
-	int	i;
-
-	i = 256;
-	if ((isdigit(i) && ft_isdigit(i)) ||
-		(!isdigit(i) && !ft_isdigit(i)))
-		printf("\033[0;32m""OK\n""\033[0m");
-	else
-		printf("\033[0;31m""KO\n""\033[0m");	
-	return (0);
-}
-*/

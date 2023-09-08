@@ -13,7 +13,8 @@
 #include "libft.h"
 
 /*
-
+ * 	Converts an integer value to a dynamically allocated string.
+ *	Return an allocated string representing the integer value.
 	create buffer with max size 12 (11 for longest int and 1 for null terminated)
 
 	do null terminated
@@ -29,11 +30,11 @@
 
 char	*ft_itoa(int n)
 {
-	char	buffer[12];
+	char	buffer[11];
 	char	size;
+	char	*a;
 	int		i;
 
-	buffer[11] = '\0';
 	size = 1;
 	if (n < 0)
 		size = -1;
@@ -50,17 +51,10 @@ char	*ft_itoa(int n)
 	}
 	if (size == -1)
 		buffer[i--] = '-';
-	return (ft_strdup(&buffer[i + 1]));
+	a = (char *)malloc(sizeof(char) * (11 - i));
+	if (!a)
+		return (NULL);
+	ft_strlcpy(a, buffer + i + 1, 11 - i);
+	return (a);
 }
 
-/*
-int	main(void)
-{
-	char *s;
-
-	s = ft_itoa(0);
-	printf("%s\n", s);
-	free(s);
-	return (0);
-}
-*/

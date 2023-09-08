@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/*
+ *	checks for a uppercase character.
+ */
+
 int	ft_isupper(int c)
 {
 	if (c >= 'A' && c <= 'Z')

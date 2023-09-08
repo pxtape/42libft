@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+ *	checks for white-space characters,
+ *	including '\f', '\n', '\t', '\v' and space.
+ */
+
 int	ft_isspace(int c)
 {
 	if (c == 32 || c == 9

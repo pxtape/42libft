@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+ *	checks for an alphabetic character;
+ *	equivalent to (isupper(c) || islower(c))
+ */
+
 int	ft_isalpha(int c)
 {
 	if (ft_islower(c) || ft_isupper(c))
@@ -19,17 +24,3 @@ int	ft_isalpha(int c)
 	return (0);
 }
 
-/*
-int	main(void)
-{
-	int	i;
-
-	i = 256;
-	if ((isalpha(i) && ft_isalpha(i)) ||
-		(!isalpha(i) && !ft_isalpha(i)))
-		printf("\033[0;32m""OK\n""\033[0m");
-	else
-		printf("\033[0;31m""KO\n""\033[0m");	
-	return (0);
-}
-*/

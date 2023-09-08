@@ -12,6 +12,16 @@
 
 #include "libft.h"
 
+/*
+ * Convert initial portion of str to be integer (without overflow protection)
+ * 1. Skip all initial whitespace in str
+ * 2. Get positive and negative sign
+ * 3. get the value all next digits (Everything behind numbers don't need to be care)
+ *
+ * Additional for real function [Doesn't Implement]: 
+ * 	Overflow to size of long long will return (-1)
+*/
+
 int	ft_atoi(const char *c)
 {
 	int	value;
@@ -35,17 +45,3 @@ int	ft_atoi(const char *c)
 	return (value);
 }
 
-/*
-int	main(int ac, char **av)
-{
-	int	i;
-
-	if (ac > 1)
-	{
-	i = 0;
-	while (++i < ac)
-		printf("%d. [real = %d] -- [ft = %d]\n",i , atoi(av[i]), ft_atoi(av[i]));
-	}
-	return (0);
-}
-*/

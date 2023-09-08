@@ -12,24 +12,13 @@
 
 #include "libft.h"
 
-void	ft_bzero(void *str, size_t size)
+/*
+ *	writes n zeroed bytes to the string s.
+ *	If n is zero, nothing to do. 
+*/
+
+void	ft_bzero(void *s, size_t n)
 {
-	ft_memset(str, 0, size);
+	ft_memset(s, 0, n);
 }
 
-/*
-#include <strings.h>
-int	main(void)
-{
-	char tab[20];
-	char tab2[20];
-	memset(tab, 'A', 20);
-	memset(tab2, 'A', 20);
-	ft_bzero(tab, 3);
-	bzero(tab2, 3);
-	if (!memcmp(tab, tab2 ,20))
-		printf("\033[0;32m""OK\n""\033[0m");
-	else
-		printf("\033[0;31m""KO\n""\033[0m");
-}
-*/

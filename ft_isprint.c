@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/*
+ *	checks for any printable character including space.`
+ */
+
 int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
@@ -19,17 +23,3 @@ int	ft_isprint(int c)
 	return (0);
 }
 
-/*
-int	main(void)
-{
-	int	i;
-
-	i = 256;
-	if ((isprint(i) && ft_isprint(i)) ||
-		(!isprint(i) && !ft_isprint(i)))
-		printf("\033[0;32m""OK\n""\033[0m");
-	else
-		printf("\033[0;31m""KO\n""\033[0m");	
-	return (0);
-}
-*/
