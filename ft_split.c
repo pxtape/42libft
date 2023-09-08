@@ -6,25 +6,23 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 11:40:57 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/09/03 14:09:52 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/08 23:57:24 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-
-	start and stop to get the range for each str.
-	(exclude stop)
-	start and stop = beginning of s.
-	while start != null
-		if c at stop or stop is null, calculate the length (stop - start).
-			if length >= 1, malloc new str (length + 1) and strlcpy to it.
-			if stop != null, move start and stop to stop + 1
-			else start = stop
-		if c not at stop ,move stop more one step.
-	return array
-
+ *	Returns an array of strings obtained by splitting 's' 
+ *	using the character 'c' as a delimiter.
+ *	The array must end with NULL pointer.
+ *
+ *	1. Starts with counting the number of the splitted string.
+ *	2. Allocated the array with the size, including null-terminated.
+ *	3. Find each splitted string, allocated each string and put it into the array.
+ *	
+ *	If something is wrong, free all splitted strings
+ *	that have been allocated and also with array.
 */
 
 static size_t	count_split(char const *s, char c)
@@ -61,6 +59,7 @@ static char	*get_split(char const *s, char c, char **arr, size_t *p_size)
 				|| *(s + j + 1) == '\0')))
 		j++;
 	split = (char *)malloc(j + 2);
+	arr[*p_size] = NULL;
 	if (!split)
 	{
 		clear_arr(arr);
@@ -97,24 +96,3 @@ char	**ft_split(char const *s, char c)
 	arr[size] = NULL;
 	return (arr);
 }
-
-/*
-int	main(int ac, char**av)
-{
-	char	**set;
-	int	i;
-
-	i = 0;
-	if (ac == 3)
-	{
-		set = ft_split(av[1], av[2][0]);
-		while (set[i] != NULL)
-		{
-			printf("[i]--%s--[f]\n", set[i]);
-			free(set[i++]);
-		}
-		free(set);
-	}
-	return (0);
-}
-*/

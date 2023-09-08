@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 11:40:57 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/09/03 13:29:37 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/09 00:18:38 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,32 @@
 /*
  * 	Converts an integer value to a dynamically allocated string.
  *	Return an allocated string representing the integer value.
-	create buffer with max size 12 (11 for longest int and 1 for null terminated)
-
-	do null terminated
-	size show positive and negative
-	if n is negative then sign = -1 otherwise 1
-	start from back to front
-	give the number of each digit to buffer (small to big)
-	finish when n == 0
-	if negative add minus sign
-	cpy this buffer to new malloc str by strdup and return it'
-
+ *
+ *	1. Buffer with size of 11 characters (10 characters for
+ *	digits and 1 character for negative sign).
+ *	2. if n is negative, give sign = -1 otherwise sign = 1.
+ *	3. To obtain the final digit, calculate the remainder by n % 10 
+ *	(multiply by -1, if n is negative).
+ *	4. To get the next digit, n /= 10 
+ *	5. Put each digit to an appropriate position.
+ *	6. allocate new string and copy from buffer to the new one.
 */
+
+static char	*create_number(char *buffer, int size)
+{
+	char	*a;
+
+	a = (char *)malloc(sizeof(char) * size);
+	if (!a)
+		return (NULL);
+	ft_strlcpy(a, buffer, size);
+	return (a);
+}
 
 char	*ft_itoa(int n)
 {
 	char	buffer[11];
 	char	size;
-	char	*a;
 	int		i;
 
 	size = 1;
@@ -51,10 +59,5 @@ char	*ft_itoa(int n)
 	}
 	if (size == -1)
 		buffer[i--] = '-';
-	a = (char *)malloc(sizeof(char) * (11 - i));
-	if (!a)
-		return (NULL);
-	ft_strlcpy(a, buffer + i + 1, 11 - i);
-	return (a);
+	return (create_number(buffer + i + 1, 11 - i));
 }
-

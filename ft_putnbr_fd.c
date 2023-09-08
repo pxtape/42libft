@@ -6,16 +6,20 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 11:05:29 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/09/07 13:51:52 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/08 23:58:05 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+ *	Outputs the integer 'n' to the given file descriptor.
+ */
+
 void	ft_putnbr_fd(int n, int fd)
 {
 	char	buffer[11];
-	char	size;
+	int		size;
 	int		i;
 
 	size = 1;
@@ -37,12 +41,3 @@ void	ft_putnbr_fd(int n, int fd)
 	i++;
 	write(fd, buffer + i, 11 - i);
 }
-
-/*
-int	main(void)
-{
-	ft_putnbr_fd("+200abc", 1);
-	ft_putendl_fd("", 1);
-	return (0);
-}
-*/

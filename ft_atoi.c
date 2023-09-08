@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 11:32:36 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/09/03 10:02:38 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/09 00:06:19 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
  * Convert initial portion of str to be integer (without overflow protection)
  * 1. Skip all initial whitespace in str
  * 2. Get positive and negative sign
- * 3. get the value all next digits (Everything behind numbers don't need to be care)
+ * 3. get the value all next digits 
+ * (Everything behind numbers don't need to be care)
  *
  * Additional for real function [Doesn't Implement]: 
  * 	Overflow to size of long long will return (-1)
@@ -44,4 +45,3 @@ int	ft_atoi(const char *c)
 	}
 	return (value);
 }
-

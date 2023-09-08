@@ -6,20 +6,18 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 11:39:45 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/09/07 12:09:10 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/09 00:11:57 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-	copy only size - 1 but if cpy all src already stop
-	special case: size = 0
-		cpy would not occur and no null-terminated
-	if src doesn't been all copied go to the end of src to get i == strlen(src)
-	(use less time doesn't need to use strlen(src))
-	return length of src
-*/
+ * Copies up to size - 1 characters string src to dst.
+ * NULL-terminating the result.
+ * return the total length of the
+ * string they tried to create.
+ */
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
@@ -37,15 +35,3 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 		i++;
 	return (i);
 }
-
-/*
-int	main(void)
-{
-	char s1[50] = "Hello";
-	char s2[] = " World!";
-	
-	printf("%zu ", ft_strlcat(s1, s2, 50));
-	printf("%s\n", s1);
-	return (0);
-}
-*/

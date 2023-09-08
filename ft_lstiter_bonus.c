@@ -12,9 +12,17 @@
 
 #include "libft.h"
 
+/*
+ *	Iterates the linked list and applies the f() on the content of each node.
+ *
+ *	If the node is NULL, NOTHING TO DO.
+ *	If f is NULL, NOTHING TO DO.
+ *	Go through each node, and apply on the content of each node with f().
+ */
+
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (!lst)
+	if (!lst || !f)
 		return ;
 	while (lst)
 	{

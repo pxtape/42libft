@@ -6,11 +6,20 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 11:39:56 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/09/07 12:59:21 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/09 00:24:11 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+ * Find s2 in s1 in the first portion of size characters.
+ * 
+ * If s2 is found, then returns a pointer to
+ * address of first character of s2 in s1
+ * If not found, returns NULL
+ * But if s2 is empty string, then return s1.
+*/
 
 char	*ft_strnstr(const char *s1, const char *s2, size_t size)
 {
@@ -36,14 +45,3 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t size)
 	}
 	return (NULL);
 }
-
-/*
-int	main(void)
-{
-	char s[] = "Hello,World! Nice to Meet You";
-	char n[] = "";
-
-	printf("%s\n", ft_strlstr(s, n, 30));
-	return (0);
-}
-*/

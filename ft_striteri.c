@@ -16,25 +16,9 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	size_t	i;
 
-	if (!s || !f)
+	if (!f)
 		return ;
 	i = 0;
 	while (*s)
 		f(i++, s++);
 }
-
-/*
-static void adding(unsigned int i, char *s)
-{
-	*s += i;
-}
-
-int main(void)
-{
-	char A[] = "AAAAAAAAAAAAAAAAAAAAAAAAAA";
-
-	ft_striteri(A, adding);
-	printf("%s\n", A);
-	return (0);
-}
-*/

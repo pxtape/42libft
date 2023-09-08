@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+ *	Allocated sufficient memory for a copy of the string src,
+ *	does copy, and returns a pointer to it.
+ */
+
 char	*ft_strdup(char *src)
 {
 	char	*newstr;
@@ -24,14 +29,3 @@ char	*ft_strdup(char *src)
 	ft_strlcpy(newstr, src, size + 1);
 	return (newstr);
 }
-
-/*
-int	main(void)
-{
-	char	*name = ft_strdup(NULL);
-
-	printf("%s\n", name);
-	free(name);
-	return (0);
-}
-*/

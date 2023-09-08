@@ -6,21 +6,20 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 11:39:40 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/09/07 12:39:22 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/09 00:09:54 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-	find the src len and dest len
-	
-	start at in dest index
-	cpy to size - 1 index
-
-	handle when size < 0
-
-*/
+ * Append the null-terminated src to the end of dest.
+ * Guarantee to NULL-terminate the result
+ * within buffer size
+ * For strlcat() both src and dst must be NULL-terminated.
+ * Return the initial length of dst 
+ * plus the length of src
+ */
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
@@ -29,11 +28,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	i;
 
 	if (!size)
-	{
-		if (!src)
-			return (0);
 		return (ft_strlen(src));
-	}
 	src_len = ft_strlen(src);
 	dest_len = ft_strlen(dest);
 	i = dest_len;
@@ -50,15 +45,3 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 		dest_len = size;
 	return (dest_len + src_len);
 }
-
-/*
-int	main(void)
-{
-	char s1[50] = "Hello";
-	char s2[] = " World!";
-	
-	printf("%zu ", ft_strlcat(s1, s2, 50));
-	printf("%s\n", s1);
-	return (0);
-}
-*/

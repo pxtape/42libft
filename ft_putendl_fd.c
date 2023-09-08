@@ -12,16 +12,12 @@
 
 #include "libft.h"
 
+/*
+ *	Outputs the string 's' to the given file desciptor followed by newline.
+ */
+
 void	ft_putendl_fd(char *s, int fd)
 {
 	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);
 }
-
-/*
-int	main(void)
-{
-	ft_putendl_fd("A", 1);
-	return (0);
-}
-*/

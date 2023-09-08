@@ -12,6 +12,14 @@
 
 #include "libft.h"
 
+/*
+ *	Return the last node of the list.
+ *
+ *	If a node is NULL, NOTHING IS LAST NODE.
+ *	Go through each node and check that next node is NULL or not.
+ *	If TRUE, that node is the last node of linked list.
+ */
+
 t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)

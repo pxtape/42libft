@@ -6,36 +6,33 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 11:39:54 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/09/07 14:07:55 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/09 00:18:57 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// using ft_memcmp because original strncmp compare by unsigned char
+/*
+ * Compare str the most n characters with unsigned char
+ * If there are differing characters, then returns
+ * different of both.
+ */
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	i;
+	size_t			i;
+	unsigned char	*c1;
+	unsigned char	*c2;
 
+	c1 = (unsigned char *)s1;
+	c2 = (unsigned char *)s2;
 	i = 0;
 	while (i < n)
 	{
-		if (!*(s1 + i) || !*(s2 + i)
-			|| ft_memcmp(s1 + i, s2 + i, 1))
-			return (ft_memcmp(s1 + i, s2 + i, 1));
+		if (!*(c1 + i) || !*(c2 + i)
+			|| *(c1 + i) != *(c2 + i))
+			return (*(c1 + i) - *(c2 + i));
 		i++;
 	}
 	return (0);
 }
-
-/*
-int	main(void)
-{
-	char s1[] = "AAAAA";
-	char s2[] = "AAAZA";
-
-	printf("%d\n", strncmp(s1, s2, 5));
-	return (0);
-}
-*/

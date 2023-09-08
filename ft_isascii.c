@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/26 11:52:00 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/09/03 10:29:17 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/08 23:57:39 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,9 @@
  *	that fits into the ASCII character set.
  */
 
-
 int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 		return (1);
 	return (0);
 }
-

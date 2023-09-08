@@ -6,13 +6,26 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 14:41:35 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/09/07 11:36:56 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/08 23:58:36 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t size)
+/*
+ *	Compare the most n bytes between s1 and s2.
+ *	Return the difference between the first two differing bytes. 
+ *	(Treated as unsigned char values)
+ *
+ *	If s1 point to the same address as s2,
+ *	then both should be identical (NO NEED TO CHECK).
+ *	Find the most n bytes, if differing bytes is found
+ *	then return the different of both.
+ *	If the most n bytes, nothing is different then return zero.
+ *	If n is zero, then both s1 and s2 is always identical.
+ */
+
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char	*p1;
 	unsigned char	*p2;
@@ -21,7 +34,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t size)
 	p2 = (unsigned char *)s2;
 	if (p1 == p2)
 		return (0);
-	while (size--)
+	while (n--)
 	{
 		if (*p1 != *p2)
 			return (*p1 - *p2);
@@ -30,19 +43,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t size)
 	}
 	return (0);
 }
-
-/*
-int	main(void)
-{
-	char s1[] = {0, 1, 2, 3};
-	char s2[] = {0, 1, 2, 3};
-	char s3[] = {1, 0, 120, 0};
-	char s4[] = {1, 0, 30, 0};
-
-	printf("%d\n",!ft_memcmp(s1, s2, 4));
-	printf("%d\n",!ft_memcmp(s1, s2, 0));
-	printf("%d\n",ft_memcmp(s1, s3, 4) < 0);
-	printf("%d\n",ft_memcmp(s3, s4, 4) > 0);
-	return (0);
-}
-*/

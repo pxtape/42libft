@@ -6,40 +6,32 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/26 14:50:11 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/09/07 11:33:06 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/08 23:56:26 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+/*
+ *	Copies n bytes from memory area s2 to memory area s1 
+ *	(Don't care overlap, behavior is undefined).
+ *
+ *	Copy from left to right througt n bytes,
+ *	but if s1 is the same as s2 then nothing need to copy.
+ *	This will broken and make undefined behavior
+ *	when s1 is in the right of s2 and overlapped.
+ */
+
+void	*ft_memcpy(void *s1, const void *s2, size_t n)
 {
 	unsigned char	*p1;
 	unsigned char	*p2;
 
-	if (src == dest)
-		return (dest);
-	p1 = (unsigned char *)dest;
-	p2 = (unsigned char *)src;
+	if (s2 == s1)
+		return (s1);
+	p1 = (unsigned char *)s1;
+	p2 = (unsigned char *)s2;
 	while (n--)
-	{
-		*p1 = *p2;
-		p1++;
-		p2++;
-	}
-	return (dest);
+		*p1++ = *p2++;
+	return (s1);
 }
-
-/*
-int	main(void)
-{
-	char dest[20];
-
-	memset(dest, 'A', 20);
-	ft_memcpy(dest, "coucou", 0);
-	write(1, dest, 20);
-	write(1, "\n", 1);
-	return (0);
-}
-*/

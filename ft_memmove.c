@@ -11,48 +11,32 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#define BUFFER_SIZE 1024
 
 /*
-	check overlap dest and src (size of n)
-	1. overlap and dest in the right of src (copy from back to front)
-	2. otherwise do the same memcpy (copy from front to back)
+	If s1 is in the right of s2
+	1. If yes then copy from back to front
+	2. If not then copy from front to back
+	(Copy total n bytes)
+	No undefined behavior would be occurred.
 */
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *s1, const void *s2, size_t n)
 {
 	unsigned char		*d;
 	const unsigned char	*s;
 
-	if (dest == src)
-		return (dest);
-	s = (const unsigned char *)src;
-	d = (unsigned char *)dest;
+	if (s1 == s2)
+		return (s1);
+	s = (const unsigned char *)s2;
+	d = (unsigned char *)s1;
 	if (d > s)
 	{
 		d += n - 1;
 		s += n - 1;
 		while (n--)
-		{
-			*d = *s;
-			d--;
-			s--;
-		}
+			*d-- = *s--;
 	}
 	else
-		ft_memcpy(dest, src, n);
-	return (dest);
+		ft_memcpy(s1, s2, n);
+	return (s1);
 }
-
-/*
-int	main(void)
-{
-	char dest[20];
-
-	memset(dest, 'A', 20);
-	ft_memmove(dest, "coucou", 0);
-	write(1, dest, 20);
-	write(1, "\n", 1);
-	return (0);
-}
-*/

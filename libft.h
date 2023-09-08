@@ -6,7 +6,7 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/26 11:49:11 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/09/07 13:28:36 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/09 00:40:51 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,9 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
-# include <limits.h>
-# include <stdint.h>
-
-/* for testing */
-# include <string.h>
-# include <stdio.h>
-# include <ctype.h>
 
 /* 
-	string
+ * string
 */
 
 int		ft_isspace(int c);
@@ -57,7 +50,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 /* 
-	memory
+ * memory
 */
 
 void	*ft_memset(void *str, int c, size_t size);
@@ -69,7 +62,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t size);
 void	*ft_calloc(size_t nitems, size_t size);
 
 /*
-	put
+ * put
 */
 
 void	ft_putchar_fd(char c, int fd);
@@ -78,7 +71,7 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
 /*
-	bonus
+ * bonus
 */
 
 typedef struct s_list

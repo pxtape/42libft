@@ -12,14 +12,18 @@
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t size)
+/*
+ *	Locate the first occurence of c (compare by unsigned char) in string s.	
+ */
+
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*p;
-	int				k;
+	unsigned char	k;
 
 	p = (unsigned char *)s;
 	k = (unsigned char)c;
-	while (size--)
+	while (n--)
 	{
 		if (*p == k)
 			return ((void *)p);
@@ -27,14 +31,3 @@ void	*ft_memchr(const void *s, int c, size_t size)
 	}
 	return (NULL);
 }
-
-/*
-int	main(void)
-{
-	char s[] = {0,1,2,3,4,5,6};
-	
-	printf("%ld\n", ft_memchr(s, 6, 7) - (void *)s);
-	printf("%ld\n", ft_memchr(s, 0, 7) - (void *)s);
-	return (0);
-}
-*/

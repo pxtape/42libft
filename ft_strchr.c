@@ -13,19 +13,8 @@
 #include "libft.h"
 
 /*
-
-	find int c (change to char first) in str
-
-	if found return that pointer
-	if not found return NULL
-
-	special case for c == 0 or NULL :
-		adding at the end of string
-		if the end is the same as c (NULL)
-			return the pointer
-		otherwise
-			return NULL
-
+ *	Locates the first occurence of c (converted to a char).
+ *	This can also find the null-terminated as well (when c is zero).
 */
 
 char	*ft_strchr(const char *str, int c)
@@ -43,14 +32,3 @@ char	*ft_strchr(const char *str, int c)
 		return ((char *)str);
 	return (NULL);
 }
-
-/*
-int	main(void)
-{
-	char haystack[] = "Name";
-	char needle = 'm';
-
-	printf("%ld\n", ft_strchr(haystack, needle) - haystack);
-	return (0);
-}
-*/

@@ -6,16 +6,16 @@
 /*   By: snetrasi <snetrasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 19:06:24 by snetrasi          #+#    #+#             */
-/*   Updated: 2023/09/07 14:04:30 by snetrasi         ###   ########.fr       */
+/*   Updated: 2023/09/09 00:13:22 by snetrasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-
-
-
+ * Applies the function ’f’ to each character of the
+ * string ’s’, and passing its index as first argument
+ * to create a new string
 */
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
@@ -42,20 +42,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	new_s[i] = '\0';
 	return (new_s);
 }
-
-/*
-static void adding(unsigned int i, char *s)
-{
-	*s += i;
-}
-
-int main(void)
-{
-	char A[] = "AAAAAAAAAAAAAAAAAAAAAAAAAA";
-	char *B;
-
-	B = ft_strmapi(A, NULL);
-	printf("A: %s\nB: %s\n",A , B);
-	return (0);
-}
-*/
